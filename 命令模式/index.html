@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>命令模式</title>
+		<link rel="stylesheet" href="css/ViewCommd.css" />
+	</head>
+	<body>
+		<div id="title"></div>
+		<div id="product"></div>
+		<script type="text/javascript" src="js/ViewCommd.js" ></script>
+		<script type="text/javascript">
+			//产品数据
+			var productData=[
+				{
+					src:'img/shopsmall_01.jpg',
+					text:'1'
+				},
+				{
+					src:'img/shopsmall_02.jpg',
+					text:'2'
+				},
+				{
+					src:'img/shopsmall_03.jpg',
+					text:'3'
+				}
+			];
+			//模块标题数据
+			titleData={
+				title:'夏天里的一片温馨',
+				tips:'暖暖的温情带给人们家的感受。'
+			}
+			
+			ViewCommd({
+				//参数说明 方法display
+				command:'display',
+				//参数说明  parma1 : 元素容器,parma2 : 标题数据,parma3 : 元素模版
+				param:['title',titleData,'title']
+			});
+			
+			ViewCommd({
+				//参数说明 方法display
+				command:'create',
+				//参数说明  parma1 : 元素容器,parma2 : 标题数据,parma3 : 元素模版
+				param:[{
+					src:'img/shopsmall_01.jpg',
+					text:'创建的',
+				},'product']
+			});
+			ViewCommd({
+				//参数说明 方法display
+				command:'display',
+				//参数说明  parma1 : 元素容器,parma2 : 标题数据,parma3 : 元素模版
+				param:['product',productData,'product']
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,45 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+#title{
+	width: 100%;
+}
+#title .title{
+	border-bottom: 1px solid #000;
+	
+}
+#title .title .main h2{
+	text-align: center;
+	height:60px ;
+	line-height: 60px;
+}
+#title .title .main p{
+	position: absolute;
+	top: 50px;
+	right: 40px;
+	background-color: #fff;
+	padding: 0 20px;
+}
+#product{
+	margin: 10px auto;
+	width: 1024px;
+}
+#product div{
+	float: left;
+	width: 256px;
+}
+#product div img{
+	width: 200px;
+	padding: 0 28px;
+}
+#product div p{
+	position: absolute;
+	top: 320px;
+	width:200px;
+	margin-left: 28px;
+	text-align: center;
+	background-color: rgba(155,155,155,.6);
+	/*opacity: .5;*/
+	
+}
