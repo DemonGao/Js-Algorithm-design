@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>合并数组去重</title>
+</head>
+<body>
+<script>
+//    合并2个数组去重
+    function concat(arr1, arr2) {
+        var temp = arr1.concat([]);
+        for(let i=0;i<arr2.length;i++){
+            if(temp.indexOf(arr2[i]) == -1){
+                temp.push(arr2[i])
+            }
+        }
+        console.log(temp);
+    }
+    console.log(concat([1, 2, 3, 4], ['a', 'b', 'c', 1,2,3,4,5]));
+
+
+//    合并多少素组去重
+    var concat3 = function(){
+        if(arguments.length<1){
+            return false;
+        }
+
+        var concat_ = function(arr1,arr2){
+            var arr = arr1.concat([]);
+            for(let i = 0; i < arr2.length;i++){
+                if(arr.indexOf(arr2[i]) == -1){
+                    arr.push(arr2[i])
+                }
+            }
+            return arr;
+        }
+
+        var result = arguments[0];
+        for(var i =1 ;i<arguments.length;i++){
+            result = concat_(result,arguments[i])
+        }
+
+        function sortNumber(a,b){
+//            console.log(`${a} - ${b} , ${(a-b)>0}`)
+            return a-b;
+        }
+        console.log(result);
+        return result.sort(sortNumber);
+    }
+var arr1 = [1,6,4,0];
+var arr2 = [8,20,7,4.5];
+var arr3 = [6,0,7,90,2];
+var arr4 = [1,4,8,99,100];
+    console.log(concat3(arr1,arr2,arr3,arr4));
+</script>
+</body>
+</html>
